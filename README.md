@@ -16,12 +16,21 @@ This repository contains
 * a PyQt-widget to visualize distances on the various angles covered by the servo motor
 * CAD-Data to print a mount for the two ultrasonic-sensors
 
+![PyQt radar widget](assets/images/radar_widget.png)
+
 ## Hooking it up
-TODO Scheme, Pictures, Videos
+![Echolocation Hardware](assets/images/hw1.jpg)
+![Echolocation Hardware](assets/images/hw2.jpg)
+![Echolocation 3D printed mount](assets/images/hw4.jpg)
+![Echolocation Hardware](assets/images/hw5.jpg)
+![Echolocation Hardware](assets/images/hw6.jpg)
+![Echolocation Hardware - Arduino Nano](assets/images/nano.jpg)
+
+TODO wire scheme, video
 
 ## Running it on a Mac
-* Hook up the hardware as described above.
+* Hook up the hardware as "described" above.
 * Connect the Arduino to your computer (USB)
 * Make sure your drivers are installed and the device is available (Arduino IDE/terminal ...)
-* Check the EcholocationVisualization folder's README.md on how to start the Qt-Gui.
+* Check the [EcholocationVisualization's README.md](EcholocationVisualization/README.md) on how to start the Qt-Gui.
 * Have fun
