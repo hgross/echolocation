@@ -24,9 +24,10 @@ class MessageConsumerBase(QThread):
         """Tries to parse a received line from a stream. Returns Measurements, if succeeded. Empty list otherwise."""
         # decode
         try:
-            line = str(line, "utf-8")
-        except:
-            print(self.LOG_TAG + "could not convert line to utf-8")
+            if not isinstance(line, str):
+                line = str(line, "utf-8")
+        except Exception as e:
+            print(self.LOG_TAG + "could not convert line to utf-8: %s" % (str(e), ))
             return []
 
         if line.startswith("{") and line.strip().endswith("}") and line.count("measurements") == 1:

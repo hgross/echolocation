@@ -70,7 +70,7 @@ if __name__ == "__main__":
     input_stream = serial.Serial(args.serial_device, args.baud_rate) if args.serial_device is not None else open(args.input_file, "r")
 
     # start the stream consumer
-    consumer = StreamMessageConsumer(input_stream, delay=0.2 if args.mocked else 0)
+    consumer = StreamMessageConsumer(input_stream, delay=0.05 if args.mocked else 0)
     consumer.SIGNAL_NEW_MEASUREMENT.connect(gui.radar_widget.on_new_measurement)
     consumer.start()
 
